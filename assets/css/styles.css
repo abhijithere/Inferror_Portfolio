@@ -1,6 +1,14 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+
+
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3rem;
@@ -8,7 +16,7 @@
   /*========== Colors ==========*/
   --hue: 174;
   --sat: 63%;
-  --first-color: hsl(var(--hue), var(--sat), 40%);
+  --first-color: #e746b0;
   --first-color-alt: hsl(var(--hue), var(--sat), 36%);
   --title-color: hsl(var(--hue), 12%, 15%);
   --text-color: hsl(var(--hue), 8%, 35%);
@@ -16,7 +24,7 @@
   --container-color: #FFF;
 
   /*========== Font and typography ==========*/
-  --body-font: 'Poppins', sans-serif;
+  --body-font: 'Product Sans', sans-serif;
   --h1-font-size: 1.5rem;
   --normal-font-size: .938rem;
   --tiny-font-size: .625rem;
@@ -38,6 +46,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: var(--body-font);
 }
 
 html {
@@ -58,12 +67,13 @@ ul {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
-img {
+/* img {
   max-width: 100%;
   height: auto;
-}
+} */
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
@@ -237,6 +247,7 @@ img {
     background-color: var(--first-color);
     border-radius: 50%;
   }
+  
 
   /* Minimalist design */
   /* .active-link::before{
@@ -250,4 +261,28 @@ img {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+#progress {
+  position: fixed;
+  bottom: 70px;
+  right: 25px;
+  height: 50px;
+  width: 50px;
+  display: none;
+  place-items: center;
+  border-radius: 20%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+#progress-value {
+  display: block;
+  height: calc(100% - 10px);
+  width: calc(100% - 10px);
+  background-color: #ffffff;
+  border-radius: 20%;
+  display: grid;
+  place-items: center;
+  font-size: 35px;
+  color: #e746b0;
 }
