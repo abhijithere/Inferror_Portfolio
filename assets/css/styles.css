@@ -17,11 +17,15 @@
   --hue: 174;
   --sat: 63%;
   --first-color: #e746b0;
+  --lite-color: rgb(70 50 70);
   --first-color-alt: hsl(var(--hue), var(--sat), 36%);
-  --title-color: hsl(var(--hue), 12%, 15%);
+  --title-color: #fff;
+  --lite-body:rgba(120, 2, 100, 0.198);
   --text-color: hsl(var(--hue), 8%, 35%);
-  --body-color: hsl(var(--hue), 100%, 99%);
-  --container-color: #FFF;
+  --body-color: rgba(30, 2, 33, 0.919);
+  --container-color: rgb(34, 0, 49);
+  --primary-color: #000;
+  --secondary-color: #fff;
 
   /*========== Font and typography ==========*/
   --body-font: 'Product Sans', sans-serif;
@@ -51,14 +55,25 @@
 
 html {
   scroll-behavior: smooth;
+  transition: all 0.5s ease-in;
+}
+
+html.dark {
+  --primary-color: #fff;
+  --secondary-color: rgb(0, 0, 0);
+}
+
+html.dark {
+  background-color:rgba(30, 2, 33, 0.919);
+  color: var(--primary-color);
 }
 
 body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--body-color);
-  color: var(--text-color);
+  background-color: var(--lite-body);
+ color: var(--text-color);
 }
 
 ul {
@@ -82,7 +97,7 @@ a {
 
 .section__title {
   font-size: var(--h1-font-size);
-  color: var(--title-color);
+  color: var(--primary-color);
   text-align: center;
   margin-bottom: 1.5rem;
 }
@@ -104,9 +119,10 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--container-color);
+  background-color: var(--lite-color);
   z-index: var(--z-fixed);
   transition: .4s;
+  border-radius: 0 0 25px 25px;
 }
 
 /*=============== NAV ===============*/
@@ -135,7 +151,7 @@ a {
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: var(--container-color);
+    background-color: var(--lite-color);
     box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
     width: 100%;
     height: 4rem;
@@ -279,10 +295,26 @@ a {
   display: block;
   height: calc(100% - 10px);
   width: calc(100% - 10px);
-  background-color: #ffffff;
+  background-color: rgba(30, 2, 33, 0.919);
   border-radius: 20%;
   display: grid;
   place-items: center;
   font-size: 35px;
-  color: #e746b0;
+  color: #ffffff;
 }
+
+/* Scroll Bar color */
+::-webkit-scrollbar {
+  width: 5px;
+}
+  ::-webkit-scrollbar-track {
+  background:transparent; 
+}
+  ::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255); 
+    border-radius:10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  
+  background: rgba(30, 2, 33, 0.919); 
+} 

@@ -1,96 +1,107 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
 
-        <!--=============== BOXICONS ===============-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--=============== CSS ===============-->
-        <link rel="stylesheet" href="assets/css/styles.css">
-        <title>Inferror - A group of developers</title>
-    </head>
-    <body>
-        <div id="progress">
-            <span id="progress-value"><i class='bx bx-chevron-up'></i></span>
-          </div>
-        <!--=============== HEADER ===============-->
-        <header class="header" id="header">
-            <nav class="nav container">
-                <a onclick="window.location.reload();" class="nav__logo"><img id="nav_logo_image" height="30" src="./assets/images/logo.png" alt="Inferror Logo" srcset=""></a>
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link active-link">
-                                <i class='bx bx-home-alt nav__icon'></i>
-                                <span class="nav__name">Home</span>
-                            </a>
-                        </li>
-                        
-                        <li class="nav__item">
-                            <a href="#about" class="nav__link">
-                                <i class='bx bx-user nav__icon'></i>
-                                <span class="nav__name">About</span>
-                            </a>
-                        </li>
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
-                        <li class="nav__item">
-                            <a href="#skills" class="nav__link">
-                                <i class='bx bx-book-alt nav__icon'></i>
-                                <span class="nav__name">Skills</span>
-                            </a>
-                        </li>
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Inferror - A group of developers</title>
+</head>
 
-                        <li class="nav__item">
-                            <a href="#portfolio" class="nav__link">
-                                <i class='bx bx-briefcase-alt nav__icon'></i>
-                                <span class="nav__name">Portfolio</span>
-                            </a>
-                        </li>
+<body>
+    <div id="progress">
+        <span id="progress-value"><i class='bx bx-chevron-up'></i></span>
+    </div>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a onclick="window.location.reload();" class="nav__logo"><img id="nav_logo_image" height="30"
+                    src="./assets/images/logo2.png" alt="Inferror Logo" srcset=""></a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class='bx bx-home-alt nav__icon'></i>
+                            <span class="nav__name">Home</span>
+                        </a>
+                    </li>
 
-                        <li class="nav__item">
-                            <a href="#contactme" class="nav__link">
-                                <i class='bx bx-message-square-detail nav__icon'></i>
-                                <span class="nav__name">Contact Us</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class='bx bx-user nav__icon'></i>
+                            <span class="nav__name">About</span>
+                        </a>
+                    </li>
 
-                <img src="assets/img/perfil.png" alt="" class="nav__img">
-            </nav>
-        </header>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class='bx bx-book-alt nav__icon'></i>
+                            <span class="nav__name">Skills</span>
+                        </a>
+                    </li>
 
-        <main>
-            <!--=============== HOME ===============-->
-            <section class="container section section__height" id="home">
-                <h2 class="section__title">Home</h2>
-            </section>
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">
+                            <i class='bx bx-briefcase-alt nav__icon'></i>
+                            <span class="nav__name">Portfolio</span>
+                        </a>
+                    </li>
 
-            <!--=============== ABOUT ===============-->
-            <section class="container section section__height" id="about">
-                <h2 class="section__title">About</h2>
-            </section>
+                    <li class="nav__item">
+                        <a href="#contactme" class="nav__link">
+                            <i class='bx bx-message-square-detail nav__icon'></i>
+                            <span class="nav__name">Contact Us</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link">
+                        <!--<button class="toggle">Dark mode</button>-->
+                        <i class='bx bx-sun nav__icon' ></i>
+                        <span class="nav__name toggle">Dark Mode</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-            <!--=============== SKILLS ===============-->
-            <section class="container section section__height" id="skills">
-                <h2 class="section__title">Skills</h2>
-            </section>
+            <img src="assets/img/perfil.png" alt="" class="nav__img">
+        </nav>
+    </header>
 
-            <!--=============== PORTFOLIO ===============-->
-            <section class="container section section__height" id="portfolio">
-                <h2 class="section__title">Portfolio</h2>
-            </section>
+    <main>
+        <!--=============== HOME ===============-->
+        <section class="container section section__height" id="home">
+            <h2 class="section__title">Home</h2>
+        </section>
 
-            <!--=============== CONTACTME ===============-->
-            <section class="container section section__height" id="contactme">
-                <h2 class="section__title">Contact Us</h2>
-            </section>
-        </main>
-        
+        <!--=============== ABOUT ===============-->
+        <section class="container section section__height" id="about">
+            <h2 class="section__title">About</h2>
+        </section>
 
-        <!--=============== MAIN JS ===============-->
-        <script src="assets/js/main.js"></script>
-    </body>
+        <!--=============== SKILLS ===============-->
+        <section class="container section section__height" id="skills">
+            <h2 class="section__title">Skills</h2>
+        </section>
+
+        <!--=============== PORTFOLIO ===============-->
+        <section class="container section section__height" id="portfolio">
+            <h2 class="section__title">Portfolio</h2>
+        </section>
+
+        <!--=============== CONTACTME ===============-->
+        <section class="container section section__height" id="contactme">
+            <h2 class="section__title">Contact Us</h2>
+        </section>
+    </main>
+
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+</body>
+
 </html>

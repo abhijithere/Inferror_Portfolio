@@ -45,11 +45,21 @@ let calcScrollValue = () => {
     scrollProgress.addEventListener("click", () => {
       document.documentElement.scrollTop = 0;
     });
-    scrollProgress.style.background = `conic-gradient(#ff88d7 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+    scrollProgress.style.background = `conic-gradient(#e746b0 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
   };
   
   window.onscroll = calcScrollValue;
   window.onload = calcScrollValue;
 
-
+  const toggle = document.querySelector('.toggle')
+toggle.addEventListener('click', (e) => {
+    const html = document.querySelector('html')
+    if (html.classList.contains('dark')) {
+        html.classList.remove('dark')
+        e.target.innerHTML = 'Dark mode'
+    } else {
+        html.classList.add('dark')
+        e.target.innerHTML = 'Light mode'
+    }
+})
   
